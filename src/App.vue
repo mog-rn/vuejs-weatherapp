@@ -12,14 +12,21 @@ export default {
   data() {
     return {
       ApiKey: "9595f7953f14d0ebc0d94574fad520c4",
-      city: "Detroit",
+      city: "Eldoret",
     };
+  },
+  created() {
+    this.getCurrentWeather();
   },
   methods: {
     getCurrentWeather() {
-      axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${this.ApiKey}`
-      );
+      axios
+        .get(
+          `https://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${this.ApiKey}`
+        )
+        .then((res) => {
+          console.log(res.data);
+        });
     },
   },
 };
