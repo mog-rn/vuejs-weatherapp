@@ -6,6 +6,7 @@
 
 <script>
 import axios from "axios";
+import db from "./firebase/firebaseinit";
 
 export default {
   name: "App",
@@ -13,12 +14,16 @@ export default {
     return {
       ApiKey: "9595f7953f14d0ebc0d94574fad520c4",
       city: "Eldoret",
+      cities: [],
     };
   },
-  created() {
-    this.getCurrentWeather();
-  },
+  created() {},
   methods: {
+    getCityWeather() {
+      let firebaseDB = db.collections("cities");
+
+      firebaseDB.onSnapShot();
+    },
     getCurrentWeather() {
       axios
         .get(
