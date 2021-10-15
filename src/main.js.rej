@@ -1,0 +1,13 @@
+diff a/src/main.js b/src/main.js	(rejected hunks)
+@@ -1,4 +1,4 @@
+-import { createApp } from 'vue'
+-import App from './App.vue'
+-import './registerServiceWorker'
+-import router from './router'
++import { createApp } from "vue";
++import App from "./App.vue";
++import "./registerServiceWorker";
++import router from "./router";
+@@ -6 +6 @@ import router from './router'
+-createApp(App).use(router).mount('#app')
++createApp(App).use(router).mount("#app");

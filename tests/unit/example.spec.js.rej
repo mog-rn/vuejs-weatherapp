@@ -1,0 +1,24 @@
+diff a/tests/unit/example.spec.js b/tests/unit/example.spec.js	(rejected hunks)
+@@ -1,2 +1,2 @@
+-import { shallowMount } from '@vue/test-utils'
+-import HelloWorld from '@/components/HelloWorld.vue'
++import { shallowMount } from "@vue/test-utils";
++import HelloWorld from "@/components/HelloWorld.vue";
+@@ -4,3 +4,3 @@ import HelloWorld from '@/components/HelloWorld.vue'
+-describe('HelloWorld.vue', () => {
+-  it('renders props.msg when passed', () => {
+-    const msg = 'new message'
++describe("HelloWorld.vue", () => {
++  it("renders props.msg when passed", () => {
++    const msg = "new message";
+@@ -8,5 +8,5 @@ describe('HelloWorld.vue', () => {
+-      props: { msg }
+-    })
+-    expect(wrapper.text()).toMatch(msg)
+-  })
+-})
++      props: { msg },
++    });
++    expect(wrapper.text()).toMatch(msg);
++  });
++});
