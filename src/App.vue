@@ -17,12 +17,18 @@ export default {
       cities: [],
     };
   },
-  created() {},
+  created() {
+    this.getCityWeather();
+  },
   methods: {
     getCityWeather() {
       let firebaseDB = db.collections("cities");
 
-      firebaseDB.onSnapShot();
+      firebaseDB.onSnapShot((snap) => {
+        snap.docChanges.forEach(async (doc) => {
+          console.log(doc);
+        });
+      });
     },
     getCurrentWeather() {
       axios
