@@ -1,4 +1,0 @@
-diff a/src/App.vue b/src/App.vue	(rejected hunks)
-@@ -6 +6 @@
--  <router-view/>
-+  <router-view />
