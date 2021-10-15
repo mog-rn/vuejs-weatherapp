@@ -2,8 +2,7 @@
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import "@firebase/firestore";
-
+import "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -30,8 +29,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 
-const firebaseApp = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 //eslint-disable-next-line
-const analytics = getAnalytics(firebaseApp);
+const analytics = getAnalytics(app);
 
-export default firebaseApp.firestore();
+export default app.firestore();
